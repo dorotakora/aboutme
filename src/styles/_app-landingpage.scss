@@ -1,0 +1,20 @@
+.app-landingpage {
+  position: relative;
+  color: white;
+  width: 75vw;
+  height: 75vh;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.page1-enter {
+  border: 1px solid white;
+  text-align: center;
+  padding: 0.2em;
+  background-color: rgba(46, 204, 113, 1);
+}
+.page1-enter:hover {
+  cursor: pointer;
+  color: rgba(46, 204, 113, 1);
+  background-color: white;
+  border: 1px solid rgba(46, 204, 113, 1);
+  transition: 1s;
+}
