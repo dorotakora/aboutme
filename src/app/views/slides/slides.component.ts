@@ -54,24 +54,36 @@ export class SlidesComponent {
       // );
 
       // document.querySelector(".slides").classList.add("slide-in");
-      // Array.from(document.querySelectorAll(".slides"))[2].classList.add(
-      //   "qwwerty"
-      // );
+
+      Array.from(document.querySelectorAll(".slides")).forEach(slide =>
+        slide.classList.remove("slide-in-right")
+      );
+      Array.from(document.querySelectorAll(".slides")).forEach(slide =>
+        slide.classList.remove("slide-out-right")
+      );
       Array.from(document.querySelectorAll(".slides")).forEach(slide =>
         slide.classList.remove("slide-in-left")
       );
       Array.from(document.querySelectorAll(".slides")).forEach(slide =>
-        slide.classList.remove("slide-in-right")
+        slide.classList.remove("slide-out-left")
       );
 
       if (this.direction === "next") {
+        console.log(this.activeslide - 1);
         Array.from(document.querySelectorAll(".slides"))[
           this.activeslide
         ].classList.add("slide-in-right");
+        Array.from(document.querySelectorAll(".slides"))[
+          this.activeslide - 1
+        ].classList.add("slide-out-left");
       } else if (this.direction === "previous") {
+        console.log(this.activeslide + 1);
         Array.from(document.querySelectorAll(".slides"))[
           this.activeslide
         ].classList.add("slide-in-left");
+        Array.from(document.querySelectorAll(".slides"))[
+          this.activeslide + 1
+        ].classList.add("slide-out-right");
       }
     }
   }
