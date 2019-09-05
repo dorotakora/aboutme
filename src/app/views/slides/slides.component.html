@@ -13,79 +13,57 @@
   </div>
 
   <!--Slide 0-->
-  <div class="slide-0" *ngIf="activeslide === 0">
-    <p>I am a good team player</p>
-    <p>I always welcome challenges in my job</p>
-    <p>I have a significant experience in sales</p>
-    <p>I am a fast learner</p>
-    <p>I am diligent and patient</p>
-    <p>I know a lot about marketing and financial services</p>
-    <div class="lines">
-      <span class="line1"></span>
-      <span class="line2"></span>
-      <span class="line3"></span>
-      <p class="lines-p" style="font-size: 1.25em;">
-        BUT: &nbsp; I felt in love in programming and...
-      </p>
-    </div>
+  <div class="slides slide-0" *ngIf="activeslide === 0">
+    <div class="row">I am a good team player</div>
+    <div class="row">I always welcome challenges in my job</div>
+    <div class="row">I have a significant experience in sales</div>
+    <div class="row">I am a fast learner</div>
+    <div class="row">I am diligent and patient</div>
+    <div class="row">I know a lot about marketing and financial services</div>
   </div>
 
   <!--Slide 1-->
-  <div class="slide-1" *ngIf="activeslide === 1">
-    <div class="blockline">
-      <div class="flexline">
-        <p>...learned &nbsp;</p>
-        <div><img src="images/html.png" alt="html" /></div>
-        <div><img src="images/css.png" alt="css" /></div>
-        <div><img src="images/js.png" alt="js" /></div>
-        <div style="padding-left: 1.75em;">
-          <img src="images/jquery.png" alt="jquery" />
-        </div>
+  <div class="slides slide-1" *ngIf="activeslide === 1">
+    <div class="row">
+      <div>...learned &nbsp;</div>
+      <div><img src="images/html.png" alt="html" /></div>
+      <div><img src="images/css.png" alt="css" /></div>
+      <div><img src="images/js.png" alt="js" /></div>
+      <div>
+        <img src="images/jquery.png" alt="jquery" />
       </div>
     </div>
-    <div class="blockline">
-      <div class="flexline">
-        <p>now specialize in &nbsp;</p>
-        <div><img src="images/react.png" alt="react" /></div>
-      </div>
+
+    <div class="row">
+      <div>now specialize in &nbsp;</div>
+      <div><img src="images/react.png" alt="react" /></div>
     </div>
-    <div class="blockline">
-      <div class="flexline">
-        <p>started to learn &nbsp;</p>
-        <div><img src="images/firebase.png" alt="firebase" /></div>
-        <div>&nbsp;<img src="images/mongo.png" alt="mongo" /></div>
-        <div><img src="images/node.png" alt="node" /></div>
-      </div>
+
+    <div class="row">
+      <div>started to learn &nbsp;</div>
+      <div><img src="images/firebase.png" alt="firebase" /></div>
+      <div><img src="images/mongo.png" alt="mongo" /></div>
+      <div><img src="images/node.png" alt="node" /></div>
     </div>
-    <div class="blockline">
-      <div class="flexline">
-        <p>planning to learn</p>
-        <div style="padding: 0 1.5em;">
-          <img src="images/sql.png" alt="sql" />
-        </div>
-        <p>and basics of</p>
-        <p></p>
-        <div style="padding-left: 1em;"><img src="images/c.png" alt="c" /></div>
+
+    <div class="row">
+      <div>planning to learn</div>
+      <div>
+        <img src="images/sql.png" alt="sql" />
       </div>
+      <div>and basics of</div>
+      <div><img src="images/c.png" alt="c" /></div>
     </div>
-    <div class="blockline">
-      <div class="flexline">
-        <div class="line-container">
-          <div class="lines">
-            <span class="line1"></span>
-            <span class="line2"></span>
-            <span class="line3"></span>
-            <p class="lines-p" style="font-size: 1.25em;">
-              I want to become a solid front-end developer!
-            </p>
-          </div>
-        </div>
+
+    <div class="row">
+      <div>
+        I want to become a solid front-end developer!
       </div>
     </div>
   </div>
 
   <!--Slide 2-->
-  <div class="slide-2" *ngIf="activeslide === 2">
+  <div class="slides slide-2" *ngIf="activeslide === 2">
     <p>Meet me at:</p>
     <div>
       <div>

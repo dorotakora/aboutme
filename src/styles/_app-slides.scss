@@ -344,3 +344,18 @@
   left: -5%;
   z-index: 9999;
 }
+
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+.slides {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  border: 1px solid red;
+}
+.slides .row {
+  height: 100%;
+  border: 1px solid green;
+}
