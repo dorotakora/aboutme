@@ -4,12 +4,28 @@
   width: 75vw;
   height: 75vh;
   background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.page1-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page1-name {
+  font-size: 2em;
+  padding: 0.5em;
+}
+
 .page1-enter {
   border: 1px solid white;
   text-align: center;
   padding: 0.2em;
   background-color: rgba(46, 204, 113, 1);
+  width: 100%;
 }
 .page1-enter:hover {
   cursor: pointer;

@@ -1,5 +1,103 @@
 <div class="app-slides">
-  <div class="page1-enter" (click)="gotoLandingPage()">
-    Back
+  <!--Navigation-->
+  <div class="go-back" (click)="gotoLandingPage()">X</div>
+  <div
+    class="arrow arrow-previous"
+    *ngIf="activeslide > 0"
+    (click)="navigate(-1)"
+  >
+    &#8630;
+  </div>
+  <div class="arrow arrow-next" *ngIf="activeslide < 2" (click)="navigate(1)">
+    &#8631;
+  </div>
+
+  <!--Slide 0-->
+  <div class="slide-0" *ngIf="activeslide === 0">
+    <p>I am a good team player</p>
+    <p>I always welcome challenges in my job</p>
+    <p>I have a significant experience in sales</p>
+    <p>I am a fast learner</p>
+    <p>I am diligent and patient</p>
+    <p>I know a lot about marketing and financial services</p>
+    <div class="lines">
+      <span class="line1"></span>
+      <span class="line2"></span>
+      <span class="line3"></span>
+      <p class="lines-p" style="font-size: 1.25em;">
+        BUT: &nbsp; I felt in love in programming and...
+      </p>
+    </div>
+  </div>
+
+  <!--Slide 1-->
+  <div class="slide-1" *ngIf="activeslide === 1">
+    <div class="blockline">
+      <div class="flexline">
+        <p>...learned &nbsp;</p>
+        <div><img src="images/html.png" alt="html" /></div>
+        <div><img src="images/css.png" alt="css" /></div>
+        <div><img src="images/js.png" alt="js" /></div>
+        <div style="padding-left: 1.75em;">
+          <img src="images/jquery.png" alt="jquery" />
+        </div>
+      </div>
+    </div>
+    <div class="blockline">
+      <div class="flexline">
+        <p>now specialize in &nbsp;</p>
+        <div><img src="images/react.png" alt="react" /></div>
+      </div>
+    </div>
+    <div class="blockline">
+      <div class="flexline">
+        <p>started to learn &nbsp;</p>
+        <div><img src="images/firebase.png" alt="firebase" /></div>
+        <div>&nbsp;<img src="images/mongo.png" alt="mongo" /></div>
+        <div><img src="images/node.png" alt="node" /></div>
+      </div>
+    </div>
+    <div class="blockline">
+      <div class="flexline">
+        <p>planning to learn</p>
+        <div style="padding: 0 1.5em;">
+          <img src="images/sql.png" alt="sql" />
+        </div>
+        <p>and basics of</p>
+        <p></p>
+        <div style="padding-left: 1em;"><img src="images/c.png" alt="c" /></div>
+      </div>
+    </div>
+    <div class="blockline">
+      <div class="flexline">
+        <div class="line-container">
+          <div class="lines">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+            <p class="lines-p" style="font-size: 1.25em;">
+              I want to become a solid front-end developer!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Slide 2-->
+  <div class="slide-2" *ngIf="activeslide === 2">
+    <p>Meet me at:</p>
+    <div>
+      <div>
+        <a href="https://www.linkedin.com/in/dorota-kora" target="_blank">
+          <img src="images/linkedin.png" alt="linkedin" />
+        </a>
+      </div>
+      <div>
+        <a href="https://github.com/dorotakora" target="_blank">
+          <img src="images/github.png" alt="github" />
+        </a>
+      </div>
+    </div>
   </div>
 </div>
