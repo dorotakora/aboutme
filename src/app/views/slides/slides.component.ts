@@ -8,6 +8,8 @@ import { Router } from "@angular/router";
 })
 export class SlidesComponent {
   public activeslide: number = 0;
+  public direction: string;
+  public condition: string;
 
   constructor(private _CvService: CvService, private _Router: Router) {
     console.log("Slides component");
@@ -19,11 +21,19 @@ export class SlidesComponent {
     this._Router.navigate([""]);
   }
 
-  navigate(direction: number) {
+  navigate(slide: number, direction: string) {
     console.log("navigate()");
 
+    // if (slide > 0) {
+    //   this.direction = "next";
+    // } else {
+    //   this.direction = "previous";
+    // }
+
+    this.direction = direction;
+
     if (this.activeslide >= 0 && this.activeslide <= 3) {
-      this.activeslide += direction;
+      this.activeslide += slide;
 
       // document
       //   .querySelectorAll("div[class*='slide-']")
@@ -32,6 +42,37 @@ export class SlidesComponent {
       // document
       //   .querySelector(`.slide-${this.activeslide}`)
       //   .classList.add("active");
+
+      // console.log(document.querySelectorAll("div[class*='slide-']"));
+
+      // document
+      //   .querySelectorAll("div[class*='slide-']")
+      //   [this.activeslide].classList.add("slide-in");
+
+      // console.log(
+      //   Array.from(document.querySelectorAll("div[class*='slide-']"))
+      // );
+
+      // document.querySelector(".slides").classList.add("slide-in");
+      // Array.from(document.querySelectorAll(".slides"))[2].classList.add(
+      //   "qwwerty"
+      // );
+      Array.from(document.querySelectorAll(".slides")).forEach(slide =>
+        slide.classList.remove("slide-in-left")
+      );
+      Array.from(document.querySelectorAll(".slides")).forEach(slide =>
+        slide.classList.remove("slide-in-right")
+      );
+
+      if (this.direction === "next") {
+        Array.from(document.querySelectorAll(".slides"))[
+          this.activeslide
+        ].classList.add("slide-in-right");
+      } else if (this.direction === "previous") {
+        Array.from(document.querySelectorAll(".slides"))[
+          this.activeslide
+        ].classList.add("slide-in-left");
+      }
     }
   }
 }
