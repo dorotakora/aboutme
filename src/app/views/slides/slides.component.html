@@ -1,6 +1,11 @@
 <div class="app-slides">
   <!--Navigation-->
-  <div class="go-back" (click)="gotoLandingPage()">X</div>
+
+  <div class="outer-go-back">
+    <div class="inner-go-back" (click)="gotoLandingPage()">
+      <label>Back</label>
+    </div>
+  </div>
   <div
     class="arrow arrow-previous"
     *ngIf="activeslide > 0"
@@ -40,7 +45,7 @@
       </div>
       <div class="slide-0-row">
         <div>
-          <div>What I'm planning...</div>
+          <div><div>What I'm planning...</div></div>
         </div>
       </div>
     </div>
