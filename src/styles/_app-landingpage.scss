@@ -8,29 +8,45 @@
   justify-content: center;
   align-items: center;
 }
-.page1-center {
+.landingpage-center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.page1-name {
+.landingpage-name {
   font-size: 2em;
   padding: 0.5em;
 }
 
-.page1-enter {
+.landingpage-enter {
   border: 1px solid white;
   text-align: center;
   padding: 0.2em;
   background-color: rgba(46, 204, 113, 1);
   width: 100%;
 }
-.page1-enter:hover {
+.landingpage-enter:hover {
   cursor: pointer;
   color: rgba(46, 204, 113, 1);
   background-color: white;
   border: 1px solid rgba(46, 204, 113, 1);
   transition: 1s;
+}
+
+@media (max-width: 768px) {
+  .landingpage-name {
+    display: flex;
+    justify-content: center;
+  }
+  .landingpage-name img {
+    width: 80%;
+    margin: 0;
+  }
+  .landingpage-enter {
+    width: 80%;
+    margin: 0;
+    font-family: 0.8em;
+  }
 }

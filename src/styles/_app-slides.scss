@@ -2,6 +2,7 @@
   position: relative;
   color: white;
   width: 75vw;
+  min-width: 700px;
   height: 75vh;
   background-color: rgba(0, 0, 0, 0.85);
 }
@@ -70,6 +71,27 @@ label {
   bottom: 0;
 }
 
+// @media (max-width: 768px) {
+//   .outer-go-back {
+//     width: 30px;
+//   }
+//   label {
+//     font-size: 0.4em;
+//     line-height: 2.5em;
+//   }
+// }
+// @media (max-width: 414px) {
+//   .outer-go-back {
+//     width: 20px;
+//     position: absolute;
+//     top: 15px;
+//     right: 15px;
+//   }
+//   label {
+//     font-size: 0.3em;
+//   }
+// }
+
 // Arrow Previous and Next------------------------>
 
 .arrow-previous {
@@ -103,22 +125,21 @@ label {
 
 .app-slides-content {
   position: relative;
-
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
 .slides {
-  // height: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-evenly;
-  // border: 1px solid red;
+  border: 1px solid red;
   position: absolute;
   right: -100%;
   width: 100%;
+  min-width: 700px;
   height: 100%;
   // background: blue;
 }
@@ -352,7 +373,8 @@ label {
         border: none;
         border-bottom: 1px solid rgba(46, 204, 113, 1);
         margin-left: -2%;
-        margin-right: 75%;
+        margin-right: 0;
+        width: 40%;
       }
     }
   }
@@ -362,29 +384,79 @@ label {
   margin-bottom: 2%;
 }
 
+// @media (max-width: 1024px) {
+//   .slide-0 div:nth-of-type(7) :first-child :first-child :first-child {
+//     width: 60%;
+//   }
+//   .slide-0 .slide-0-row span {
+//     font-size: 0.8em;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .slide-0 div:nth-of-type(7) :first-child :first-child :first-child {
+//     width: 85%;
+//     font-size: 0.9em;
+//   }
+//   .slide-0 .slide-0-row span {
+//     font-size: 0.6em;
+//   }
+
+//   .slide-0 div:first-child {
+//     margin-left: 31%;
+//   }
+//   .slide-0 div:nth-of-type(2) {
+//     margin-left: 8%;
+//   }
+
+//   .slide-0 div:nth-of-type(3) {
+//     margin-left: 12%;
+//   }
+
+//   .slide-0 div:nth-of-type(4) {
+//     margin-left: 52%;
+//   }
+
+//   .slide-0 div:nth-of-type(5) {
+//     margin-left: 38%;
+//   }
+//   .slide-0 div:nth-of-type(6) {
+//     margin-left: 0.5%;
+//   }
+// }
+
+// @media (max-width: 414px) {
+//   .slide-0 div:nth-of-type(7) :first-child :first-child :first-child {
+//     width: 95%;
+//     font-size: 0.7em;
+//   }
+//   .slide-0 .slide-0-row span {
+//     font-size: 0.4em;
+//   }
+// }
+
 // Slide 1 ------------------------>
 
 .slide-1 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  // width: 100%;
+  // height: 50vh;
+  // display: flex;
+  // flex-direction: column;
+  // border: 1px solid blue;
+  background-color: blue;
 }
 
 .slide-1-row {
-  width: 100%;
-  height: 100%;
-  padding: 1em 3em 1em 3em;
+  // width: 100%;
+  height: 20%;
+  padding: 0.2em 3em 0.2em 3em;
   box-sizing: border-box;
   display: flex;
+  // border: 1px solid yellow;
 }
 
 .slide-1 .slide-1-row:nth-of-type(1) {
   justify-content: flex-start;
-
-  img {
-    transform: scale(1.5);
-  }
 }
 
 .slide-1 .slide-1-row:nth-of-type(2) {
@@ -393,24 +465,16 @@ label {
 
 .slide-1 .slide-1-row:nth-of-type(3) {
   justify-content: flex-start;
-  img[alt="firebase"] {
-    transform: scale(0.8);
-  }
-  img[alt="node"] {
-    transform: scale(0.9) translate(-1.5em);
-  }
 }
 
 .slide-1 .slide-1-row:nth-of-type(4) {
   justify-content: flex-end;
-  img {
-    transform: scale(1.5);
-  }
 }
 
-.slide-1:nth-of-type(5) .slide-1-row {
+.slide-1 .slide-1-row:nth-of-type(5) {
   justify-content: center;
 }
+
 .slide-1 .slide-1-row:nth-of-type(5) {
   :first-child {
     border-left: 1px solid rgba(46, 204, 113, 1);
@@ -431,6 +495,7 @@ label {
   }
   color: rgba(46, 204, 113, 1);
   font-size: 1.25em;
+  padding-right: 0;
 }
 
 .slide-1-row div {
@@ -438,10 +503,11 @@ label {
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  // border: 1px solid pink;
 }
 
-.slide-1 .slide-1-row img {
-  max-width: 100%;
+.slide-1 .slide-1-row div img {
+  // max-width: 100%;
   max-height: 100%;
   opacity: 0;
   animation-duration: 4s;
@@ -459,6 +525,69 @@ label {
     opacity: 1;
   }
 }
+
+// @media (max-width: 1024px) {
+//   .slide-1-row {
+//     padding: 1em 2em 1em 2em;
+//   }
+
+//   // .slide-1 .slide-1-row img {
+//   //   max-width: 90%;
+//   //   max-height: 90%;
+//   // }
+//   .slide-1 .slide-1-row:nth-of-type(5) :first-child :first-child :first-child {
+//     font-size: 0.8em;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .slide-1-row {
+//     padding: 1em 1em 1em 1em;
+//   }
+
+//   .slide-1-row div:first-child {
+//     font-size: 0.7em;
+//   }
+//   .slide-1-row div:nth-of-type(3) {
+//     font-size: 0.7em;
+//   }
+
+//   .slide-1 .slide-1-row img {
+//     max-width: 85%;
+//     max-height: 85%;
+//   }
+// }
+
+// @media (max-width: 620px) {
+//   .slide-1-row {
+//     padding: 1em 0.5em 1em 0.5em;
+//   }
+
+//   .slide-1-row div:first-child {
+//     font-size: 0.5em;
+//   }
+//   .slide-1-row div:nth-of-type(3) {
+//     font-size: 0.5em;
+//   }
+
+//   .slide-1 .slide-1-row img {
+//     max-width: 70%;
+//     max-height: 70%;
+//   }
+// }
+
+// @media (max-width: 414px) {
+//   .slide-1-row div:first-child {
+//     font-size: 0.3em;
+//   }
+//   .slide-1-row div:nth-of-type(3) {
+//     font-size: 0.3em;
+//   }
+//   .slide-1 .slide-1-row img {
+//     max-width: 100%;
+//     max-height: 100%;
+//   }
+// }
 
 // Slide 2 ------------------------>
 
@@ -483,7 +612,8 @@ label {
 }
 
 .slide-2-links-1,
-.slide-2-links-2 {
+.slide-2-links-2,
+.slide-2-links-3 {
   display: inline-block;
   height: 100%;
   padding: 1em 1em;
@@ -493,3 +623,38 @@ label {
   max-width: 100%;
   max-height: 100%;
 }
+
+.slide-2-links-3 img {
+  background-color: transparent;
+}
+
+// @media (max-width: 1024px) {
+// }
+
+// @media (max-width: 768px) {
+//   .slide-2-title {
+//     font-size: 2rem;
+//   }
+//   .slide-2-links {
+//     height: 2.5em;
+//   }
+//   .slide-2-links-1,
+//   .slide-2-links-2,
+//   .slide-2-links-3 {
+//     padding: 0.5em 0.5em;
+//   }
+// }
+
+// @media (max-width: 414px) {
+//   .slide-2-title {
+//     font-size: 1.5rem;
+//   }
+//   .slide-2-links {
+//     height: 2em;
+//   }
+//   .slide-2-links-1,
+//   .slide-2-links-2,
+//   .slide-2-links-3 {
+//     padding: 0.3em 0.3em;
+//   }
+// }
